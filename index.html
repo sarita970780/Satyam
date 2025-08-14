@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satyam • Discord Server Creator</title>
+<style>
+:root {
+  --bg: #070a1d;
+  --accent: #5865F2;
+  --accent-2: #8f87ff;
+  --panel: #0d1028;
+  --ink: #fff;
+  --muted: #aaa;
+  --radius: 12px;
+  --speed: .3s;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 600px at 10% -10%, #11183a 0%, #0a0f2c 40%, #070a1d 70%) fixed,
+              radial-gradient(1000px 700px at 110% 120%, #2c1b57 0%, #12152e 45%, #070a1d 80%) fixed;
+  line-height: 1.7;
+  margin: 0;
+}
+
+header {
+  background: var(--panel);
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav a {
+  color: var(--ink);
+  margin: 0 12px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--accent);
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--accent);
+  animation: typing 4.5s steps(45, end) forwards, caret .9s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 45ch }
+}
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+.hero p {
+  max-width: 600px;
+  margin: 12px auto;
+  color: var(--muted);
+}
+
+/* BADGES & BUTTONS */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+.badge {
+  border: 1px solid var(--accent);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.btn {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  transition: transform var(--speed), box-shadow var(--speed);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--accent-2);
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.section h2 {
+  margin-bottom: 8px;
+}
+.section p {
+  color: var(--muted);
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+.card {
+  background: var(--panel);
+  padding: 16px;
+  border-radius: var(--radius);
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* SKILLS */
+.skill-bar {
+  margin: 12px 0;
+}
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.bar {
+  height: 8px;
+  background: #222;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 8px;
+  background: var(--accent);
+  width: 0;
+  transition: width 1s ease;
+}
+
+/* ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 60px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#approach">Approach</a>
+    <a href="#servers">Servers</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero fade-up">
+  <h5 class="typing">Hi, I'm Satyam — Discord Server Creator</h5>
+  <p>I design calm, high-signal Discord servers with structure and automation that scales.</p>
+  <div class="badges">
+    <span class="badge">Server Architecture</span>
+    <span class="badge">Community Health</span>
+  </div>
+  <a class="btn" href="#servers">See Servers</a>
+  <a class="btn" href="#contact">Work With Me</a>
+</section>
+
+<section id="about" class="section fade-up">
+  <h2>About Me</h2>
+  <p>Systems thinker, community builder, detail finisher.</p>
+  <div class="cards">
+    <div class="card">I'm Satyam. Started with gaming nights, now building clear & welcoming communities.</div>
+  </div>
+</section>
+
+<section id="approach" class="section fade-up">
+  <h2>My Approach</h2>
+  <p>Less noise. More signal. Growth without chaos.</p>
+  <div class="cards">
+    <div class="card">1) Purpose & Map</div>
+    <div class="card">2) Roles & Onboarding</div>
+    <div class="card">3) Events & Cadence</div>
+    <div class="card">4) Bots as Assistants</div>
+  </div>
+</section>
+
+<section id="servers" class="section fade-up">
+  <h2>Servers I've Managed</h2>
+  <p>Communities structured for clarity and growth.</p>
+  <div class="cards">
+    <div class="card"><strong>Basu Plays</strong><br>40,000 members</div>
+    <div class="card"><strong>Theory</strong><br>3,000 members</div>
+    <div class="card"><strong>DarkWeb</strong><br>10,000 members</div>
+    <div class="card"><strong>Psd1</strong><br>30,000 members</div>
+    <div class="card"><strong>Living Legend</strong><br>50,000 members</div>
+  </div>
+</section>
+  
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Bot Expertise</h2>
+    <p class="section-subtitle">I’m perfect in using these bots for automation, moderation, and server management.</p>
+    <div class="bots-grid">
+      <div class="card bot-card">
+        <div class="bot-icon"><img src="https://cdn.discordapp.com/attachments/1384395809109446682/1405494135347216444/37e0fb2dcf8d219aa92bf02f47ea60eb.png?ex=689f07ea&is=689db66a&hm=a2f0c2afa0b9d25b07ab9ed458ccd1224b0d1b02dbafd929de17888d9c10fe50&" height="50" width="50"></div>
+        <h4>Sapphire</h4>
+        <p>Perfect</p>
+      </div>
+      <div class="card bot-card">
+        <div class="bot-icon"><img src="https://cdn.discordapp.com/attachments/1384395809109446682/1405493855490543636/c850c9bbeb25e119a4c85a9bfdb7871e.png?ex=689f07a7&is=689db627&hm=7b60ea4aeb522e4a4b99c7c7e38a3c87286543b8525f78fe039d76345475fb6a&" height="50" width="50"></div>
+        <h4>Wick</h4>
+        <p>Perfect</p>
+      </div>
+      <div class="card bot-card">
+        <div class="bot-icon"><img src="https://cdn.discordapp.com/attachments/1384395809109446682/1405493474488483840/7a445665ba9718d0df60d317067c4b0e.webp?ex=689f074d&is=689db5cd&hm=47a4ee1369df81c59f6cb60c4650b5057c482f23836d6ca0303e2b3a9dfefef1&" height="50" width="50"></div>
+        <h4>R.O.T.I</h4>
+        <p>Perfect</p>
+      </div>
+      <div class="card bot-card">
+        <div class="bot-icon"><img src="https://cdn.discordapp.com/attachments/1384395809109446682/1405493005355585656/dd89587457ef9f971d331426cad9e2be.png?ex=689f06dd&is=689db55d&hm=4c54490e2275ed46e1284ba529411294bf23ce349524a6a84718a9c81e7cea89&" height="50" width="50"></div>
+        <h4>Ticket Tool</h4>
+        <p>Perfect</p>
+      </div>
+      <div class="card bot-card">
+        <div class="bot-icon"><img src="https://cdn.discordapp.com/attachments/1384395809109446682/1405492352541261854/7ac317a9c2fc3540d9dd7d8536cdc749.webp?ex=689f0641&is=689db4c1&hm=491a37b268bcc723ca62a5cf5d99a6fb25b2176833d8386c16ed1c47c91cca49&" height="50" width="50"></div>
+        <h4>Security Bots</h4>
+        <p>Perfect</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="skills" class="section fade-up">
+  <h2>Skills & Tooling</h2>
+  <p>From system design to pixel polish — here’s where I execute fast without breaking things.</p>
+
+  <h3>Engineering</h3>
+  <div class="skill-bar">
+    <div class="skill-label"><span>Channel Layout & Optimization</span><span>95%</span></div>
+    <div class="bar"><div class="bar-fill" data-fill="95"></div></div>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-label"><span>Bot Integration & Automation</span><span>88%</span></div>
+    <div class="bar"><div class="bar-fill" data-fill="88"></div></div>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-label"><span>Moderation & Safety Systems</span><span>92%</span></div>
+    <div class="bar"><div class="bar-fill" data-fill="92"></div></div>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-label"><span>Announcement & Content Strategy</span><span>87%</span></div>
+    <div class="bar"><div class="bar-fill" data-fill="87"></div></div>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-label"><span>Member Retention & Growth</span><span>94%</span></div>
+    <div class="bar"><div class="bar-fill" data-fill="94"></div></div>
+  </div>
+</section>
+
+<section id="contact" class="section fade-up">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:satyam@gmail.com">satyam@gmail.com</a></p>
+  <p>Discord: @satyamisbackk</p>
+  <p>Twitter | Instagram | Facebook</p>
+</section>
+
+<script>
+// Fade-up on scroll
+const fadeElems = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+fadeElems.forEach(el => observer.observe(el));
+
+// Skills bar animation
+const skillBars = document.querySelectorAll('.bar-fill');
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.getAttribute('data-fill') + '%';
+    }
+  });
+});
+skillBars.forEach(bar => skillObserver.observe(bar));
+</script>
+
+</body>
+</html>
